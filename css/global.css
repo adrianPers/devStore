@@ -1,39 +1,38 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: 'calibri', sans-serif;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-main{
+main {
     flex: 1;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
 }
 
-main > div{
+main>div {
     flex: 1;
-    
 }
 
 
-.teste{
+.teste {
     height: 200vh;
 }
 
@@ -48,7 +47,6 @@ header {
     position: relative;
     flex-wrap: wrap;
     gap: 10px;
-    /* padding: 10px; */
     color: white;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
 }
@@ -60,7 +58,6 @@ header {
 
 .navHeader {
     display: flex;
-    /* background-color: red; */
     width: 100%;
     transition: 0.5s;
 }
@@ -76,38 +73,39 @@ header {
 
 
 .navHeader ul li {
-    
+
     flex: 1;
     text-align: center;
-    padding: 5px;
-    
-    /* font-weight: bold; */
     font-size: 1.2rem;
     border-radius: 10px 10px 0px 0px;
     transition: 0.5s;
     font-weight: bolder;
-    padding: 10px;
+    overflow: hidden;
 }
 
 
 .navHeader ul a {
     color: rgb(242, 99, 40);
-    /* background-color: aqua; */
     padding: 5px 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.navHeader li:hover a, .pagAtual a{
+.navHeader li:hover a,
+.pagAtual a {
     color: white !important;
 }
 
-.navHeader ul li:hover, .pagAtual {
+.navHeader ul li:hover,
+.pagAtual {
     background-color: rgb(242, 99, 40);
 }
 
 
 
-.btnHeader{
+.btnHeader {
     background-color: rgb(242, 99, 40);
     color: white;
     border: 0px;
@@ -128,7 +126,6 @@ header button svg {
 
 .btnMenu,
 .liBtnMenu {
-    /* background-color: black; */
     display: none;
 }
 
@@ -147,25 +144,50 @@ header button svg {
     .navHeader ul {
         list-style: none;
         width: 100%;
-        /* background-color: aqua; */
         flex-direction: column;
         justify-content: flex-start;
         gap: 0px;
     }
 
+    .navHeader ul li:hover{
+        background-color: transparent;
+    }
+
     .navHeader ul li {
-        padding: 15px;
+        /* padding: 15px; */
         border-block: 1px solid rgba(0, 0, 0, 0.5);
         width: 100%;
-        font-weight: bold;
-        cursor: pointer;
+        overflow: visible;
         flex: 0;
+        border-radius: 0px;
+    }
+
+    .navHeader ul a {
+        justify-content: flex-start;
+        width: 100%;
+        /* background-color: aqua; */
+        padding: 20px;
+        font-size: 1.5rem;
     }
 
 
     .btnMenu,
-    .liBtnMEnu {
+    .liBtnMenu {
         display: flex;
     }
 
+    .liBtnMenu {
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 20px;
+    }
+
+        .liBtnMenu img{
+            width: 40%;
+        }
+
+    
+    .btnHeader span{
+        font-size: 2.5rem;
+    }
 }

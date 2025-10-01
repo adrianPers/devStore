@@ -9,4 +9,4 @@ let isOpen = false;
     menu.style.left = (isOpen ? '-100%' : '0px');
     isOpen = !isOpen;
      
-}))
+}));
