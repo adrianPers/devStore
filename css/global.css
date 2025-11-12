@@ -129,6 +129,21 @@ header button svg {
     display: none;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main > div{
+    max-width: 2000px;
+    /* margin: auto; */
+}
+
+footer{
+    background-color: red;
+}
 
 @media screen and (max-width: 650px) {
 

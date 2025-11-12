@@ -1,18 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .boxSobre {
     background-color: rgb(247, 247, 247);
 }
 
-p {
+.boxSobre p {
     font-size: 16px;
 }
 
-h1 {
+.boxSobre h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +38,7 @@ h1 {
 
 }
 
-ul {
+.boxSobre ul {
     display: flex;
     justify-content: center;
     gap: 300px;
@@ -56,11 +50,11 @@ ul {
 /*Responsividade*/
 @media screen and (max-width: 768px) {
 
-    h1 {
+    .boxSobre h1 {
         font-size: 18px;
     }
 
-    p {
+    .boxSobre p {
         font-size: 14px;
         text-align: center;
     }
@@ -71,7 +65,7 @@ ul {
         text-align: center;
     }
 
-    ul {
+    .boxSobre ul {
         gap: 20px;
         font-size: 14px;
     }
