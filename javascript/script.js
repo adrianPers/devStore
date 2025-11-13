@@ -10,3 +10,17 @@ let isOpen = false;
     isOpen = !isOpen;
      
 }));
+
+const titleBanner = document.querySelector(".banner02 span");
+const wordsBanner = ["mim!", "você!", "nós!", "todos!"];
+let contBanner = 1;
+
+setInterval(() => {
+    console.log("teste")
+    titleBanner.innerHTML = wordsBanner[contBanner];
+    contBanner++;
+    if(contBanner > 3){
+        contBanner = 0;
+    }
+
+}, 2000)
