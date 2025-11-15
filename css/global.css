@@ -25,17 +25,18 @@ main {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-main>div {
+
+main > div {
     flex: 1;
+    max-width: 1500px;
 }
-
 
 .teste {
     height: 200vh;
 }
-
 
 header {
     width: 100%;
@@ -50,6 +51,19 @@ header {
     color: white;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
 }
+
+.containerHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1500px;
+    flex: 1;
+    /* background-color: red; */
+}
+
 
 .logoHeader {
     height: 100px;
@@ -136,14 +150,63 @@ main{
 }
 
 
-main > div{
-    max-width: 2000px;
-    /* margin: auto; */
+footer{
+    /* border-top: 2px solid rgb(242, 99, 40); */
+    background-color: rgb(242, 99, 40);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-footer{
-    background-color: red;
+.containerFooter{
+    flex: 1;
+    justify-content: space-around;
+    max-width: 1500px;
+    /* background-color: aqua; */
 }
+
+.boxListas{
+    display: flex; 
+    /* align-items: center; */
+}
+
+.boxListas ul{
+    flex: 1;
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.boxListas li{
+    padding: 5px;
+    color: white    ;
+}
+
+.boxListas li button{
+    color: white;
+    background-color: transparent;
+    border: 0px;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+.boxListas img{
+    height: 100px;
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.boxBottom{
+    border-top: 2px solid white;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
 
 @media screen and (max-width: 650px) {
 
@@ -154,6 +217,7 @@ footer{
         left: -100%;
         height: 100vh;
         top: 0px;
+        z-index: 2;
     }
 
     .navHeader ul {
@@ -185,7 +249,6 @@ footer{
         font-size: 1.5rem;
     }
 
-
     .btnMenu,
     .liBtnMenu {
         display: flex;
@@ -197,12 +260,23 @@ footer{
         padding-inline: 20px;
     }
 
-        .liBtnMenu img{
-            width: 40%;
-        }
+    .liBtnMenu img{
+        width: 40%;
+    }
 
     
     .btnHeader span{
         font-size: 2.5rem;
+    }
+
+    .boxListas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxListas img{
+        height: 100px;
+        width: auto;
+        margin: 10px;
     }
 }

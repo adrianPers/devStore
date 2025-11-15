@@ -1,4 +1,4 @@
-h2 {
+.boxContatos h2 {
     color: #333; 
     border-bottom: 2px solid #ccc; 
     padding-bottom: 5px; 
@@ -8,27 +8,27 @@ h2 {
 }
 
 
-p {
+.boxContatos p {
     line-height: 1.5; 
     margin-bottom: 20px;
     color: #555; 
 }
 
 
-p b {
+.boxContatos p b {
     color: #FF7026; 
     display: block; 
     font-size: 1.1em;
 }
 
 
-ul {
+.boxContatos ul {
     list-style: none; 
     padding: 0;
     margin-bottom: 30px;
 }
 
-ul li {
+.boxContatos ul li {
     margin-bottom: 8px; 
     font-weight: bold;
     color: #333;
@@ -37,7 +37,7 @@ ul li {
 }
 
 
-iframe {
+.boxContatos iframe {
     width: 100%; 
     max-width: 800px; 
     height: 400px; 
@@ -48,5 +48,5 @@ iframe {
 }
 
 main h2:first-of-type {
-    margin-top: 0 !important;
+    /* margin-top: 0 !important; */
 }

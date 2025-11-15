@@ -15,6 +15,13 @@
     justify-content: center;
 }
 
+.banner02 img{
+    width: 100%;
+    animation: destacar infinite linear 10s;
+}
+
+
+
 .banner02 h2{
     position: absolute;
     font-size: 400%;
@@ -26,27 +33,25 @@
 
 .banner02 span{
     font-size: 150%;
-    text-shadow: 0px 0px 20px rgb(243, 145, 18);
-    color: rgb(255, 155, 5);
+    text-shadow: 0px 0px 20px #f26328;
+    color: #f26328;
     font-family: "Ink Free";
 }
 
 .card{
     display: flex;
-    justify-content: center;
     width: 100%;
+    margin-block: 2.5%;
 }
 
 .card div{
     width: 55%;
     padding: 20px;
-    background-color: aliceblue;
-    clip-path: polygon(0 0, 98% 0, 100% 88%, 35% 100%, 0 100%);
+    background-color: rgb(213, 233, 250);
 }
 
 .card img {
     height: 400px;
-clip-path: polygon(7% 5%, 100% 0, 100% 100%, 35% 100%, 0 83%);
 }
 
 .card h2{
@@ -59,78 +64,102 @@ clip-path: polygon(7% 5%, 100% 0, 100% 100%, 35% 100%, 0 83%);
     /* background-color: aqua; */
 }
 
-
-
-
-
-
-
-
-.boxSobre h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3vh;
+.card:nth-child(even){
+    justify-content: flex-start;
+    flex-direction: row-reverse;
 }
 
-.img-1,
-.img-2,
-.img-3 {
-    max-width: 100%;
-    height: auto;
+.card01 img {
+    clip-path: polygon(0 0, 75% 0%, 100% 10%, 100% 42%, 95% 95%, 0 100%);
 }
 
-.container.d-flex {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.card01 div {
+  clip-path: polygon(3% 77%, 0 32%, 0 0, 100% 0, 100% 100%, 13% 98%);
 }
 
-.container.d-flex img {
-    margin-top: 10px;
+.card02 img {
+    clip-path: polygon(7% 5%, 100% 0, 100% 100%, 35% 100%, 0 83%);
 }
 
-.valores {
-    background-color: #f26328;
-    width: 100%;
-    height: 10vh;
-    color: rgb(247, 247, 247);
-
+.card02 div {
+    clip-path: polygon(0 0, 98% 0, 100% 88%, 35% 100%, 0 100%);
+}
+.card03 img {
+    clip-path: polygon(0 100%, 0 0, 59% 1%, 95% 5%, 100% 90%, 70% 98%);
 }
 
-.boxSobre ul {
-    display: flex;
-    justify-content: center;
-    gap: 300px;
-    font-size: 16px;
-    font-weight: bold;
-    list-style: none;
+.card03 div {
+    clip-path: polygon(68% 0, 100% 0, 100% 100%, 41% 100%, 3% 95%, 0 50%, 0 16%, 3% 0, 67% 0);
 }
+
+
+
+
 
 /*Responsividade*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
 
-    .boxSobre h1 {
-        font-size: 18px;
-    }
-
-    .boxSobre p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .container.d-flex {
-        flex-direction: column;
+    .banner02 {
+        flex-direction: column-reverse;
         align-items: center;
+        background-color: #EFECE9;
+
+    }
+
+    .banner02 h2{
+        width: 100%;
+        padding-top: 20px;
+        position: static;
+        font-size: 200%;
         text-align: center;
+        /* border-bottom: 1px solid; */
+        background: linear-gradient(180deg, rgba(242, 101, 40, 0.5) 5%, transparent);
+        /* background-color: rgba(242, 101, 40, 0.5); */
+
     }
 
-    .boxSobre ul {
-        gap: 20px;
-        font-size: 14px;
+    .card{
+        flex-direction: column-reverse;
+        width: 100%;
+        position: relative;
+        justify-content: flex-start;
+
     }
 
-    .valores {
-        padding: 20px 0;
+    .card img{
+        width: 100%;
+        height: auto;
+        clip-path: none;
     }
+
+    .card > div{
+        width: 100%;
+        clip-path: polygon(51% 0, 100% 16%, 100% 100%, 0 100%, 0 0);
+        position: absolute;
+        background-color: rgb(213, 233, 250);
+    }
+
+    .card p {
+        font-size: 100%;
+        text-align: justify;
+    }
+
+    .card:nth-child(even){
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.card01 div {
+    clip-path: polygon(51% 0, 100% 16%, 100% 100%, 0 100%, 0 0);
+}
+
+.card02 div {
+    clip-path: polygon(62% 3%, 82% 8%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.card03 div {
+    clip-path: polygon(44% 8%, 95% 2%, 100% 25%, 100% 100%, 0 100%, 0 0);
+}
+
+
 }
