@@ -38,6 +38,7 @@
     height: 100%;
     width: 100%;
     transition: 0.5s;
+    padding: 0px;
 }
 
 .destaques img:hover {
@@ -102,7 +103,7 @@
     width: 100%;
     height: 100%;
     border-block: 5px solid rgb(242, 99, 40);
-     display: flex;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: space-evenly;

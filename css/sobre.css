@@ -7,20 +7,18 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding: 10px;
 }
 
 .banner02 img {
     width: 100%;
-    animation: destacar infinite linear 10s;
+    clip-path: polygon(0 21%, 3% 0, 19% 3%, 50% 0, 100% 0, 100% 68%, 97% 84%, 100% 100%, 65% 99%, 38% 100%, 30% 96%, 0 100%, 19% 94%, 0 95%);
 }
 
 .banner02 h2 {
     position: absolute;
     font-size: 400%;
     color: white;
-    /* background-color: #f26328; */
-    /* padding: ; */
-
 }
 
 .banner02 span {
@@ -30,16 +28,32 @@
     font-family: "Ink Free";
 }
 
+.sobre{
+    width: 70%;
+    margin: 10px;
+}
+
+.sobre h2{
+    margin-bottom: 10px;
+}
+
+.sobre p{
+    font-size: 110%;
+    text-align: justify;
+}
+
 .card {
     display: flex;
     width: 100%;
     margin-block: 2.5%;
+    position: relative;
 }
 
 .card div {
     width: 55%;
     padding: 20px;
     background-color: #f26328;
+   
 }
 
 .card img {
@@ -52,17 +66,12 @@
 }
 
 .card p {
-    font-size: 200%;
+    font-size: 175%;
     color: #EFECE9;
+    text-align: justify;
 }
 
-.card03 li {
-    list-style: none;
-    font-size: 200%;
-    color: #EFECE9;
-}
-
-.card:nth-child(even) {
+.card:nth-child(odd) {
     justify-content: flex-start;
     flex-direction: row-reverse;
 }
@@ -83,42 +92,24 @@
     clip-path: polygon(0 0, 98% 0, 100% 88%, 35% 100%, 0 100%);
 }
 
-.card03 ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-}
-
-.card03 li {
-    list-style: none;
-    font-size: 200%;
-    color: #EFECE9;
-}
-
-.card03 .valores {
-    width: 100%;
-    text-align: center;
+.card03 img {
+    clip-path: polygon(0 0, 75% 0%, 100% 10%, 100% 42%, 95% 95%, 0 100%);
 }
 
 .card03 div {
-    width: 200%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    clip-path: polygon(3% 77%, 0 32%, 0 0, 100% 0, 100% 100%, 13% 98%);
 }
+
 
 /*Responsividade*/
 @media screen and (max-width: 650px) {
-
-
 
     .banner02 {
         flex-direction: column-reverse;
         align-items: center;
         background-color: #EFECE9;
         text-align: center;
+        padding: 0px;
     }
 
     .banner02 img {
@@ -132,7 +123,6 @@
         padding: 20px 0;
         position: static;
         font-size: 200%;
-        color: #f26328;
         background: linear-gradient(
             180deg,
             rgba(242, 101, 40, 0.25) 0%,
@@ -140,60 +130,47 @@
         );
     }
 
-    .card {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin: 40px 0;
-    }
-    .card div {
-        position: static;
-        width: 100%;
-        padding: 20px;
-        clip-path: none;
-        background-color: #f26328;
+    .sobre{
+        width: 90%;
     }
 
-    .card img {
+    .card{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        margin: 0px;
+    }
+
+    .card:nth-child(odd) {
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+    .card div {
+        width: 100%;
+        font-size: 100%;
+        position: absolute;
+
+    }
+
+    .card p{
+        font-size: 110%;
+    }
+
+    .card img{
+        clip-path: none;
         width: 100%;
         height: auto;
-        clip-path: none;
     }
 
-    .card h2 {
-        color: #EFECE9;
-        font-size: 160%;
-        text-align: center;
+    .card01 div {
+        clip-path: polygon(89% 6%, 61% 0, 100% 0, 100% 100%, 0 100%, 0 3%, 26% 0);
     }
 
-    .card p {
-        font-size: 100%;
-        color: #EFECE9;
-        text-align: justify;
-    }
-    .card:nth-child(even) {
-        flex-direction: column;
-    }
-    .card03 .valores {
-        width: 100%;
-        text-align: center;
+    .card02 div {
+        clip-path: polygon(87% 10%, 84% 0, 100% 12%, 100% 100%, 0 100%, 0 0, 32% 1%);
     }
 
-    .card03 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        padding: 0;
+    .card03 div {
+clip-path: polygon(41% 0, 96% 3%, 100% 38%, 100% 100%, 0 100%, 0 0, 15% 4%);
     }
-
-    .card03 li {
-        font-size: 130%;
-        color: #EFECE9;
-        list-style: none;
-        background: rgba(255,255,255,0.1);
-        padding: 6px 12px;
-        border-radius: 8px;
-    }
-
 }

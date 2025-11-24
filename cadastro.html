@@ -13,20 +13,20 @@
 </head>
 
 <body>
-<header> 
-        
+    <header>
+
         <div class="containerHeader">
 
-            
+
             <button class="btnHeader">
                 <span class="material-symbols-outlined">
                     shopping_cart
                 </span>
             </button>
-            
+
             <img class="logoHeader" alt="logo da Devstore" src="./imgs/logo-devstore.png" />
-            
-            
+
+
             <button class="btnHeader">
                 <span class="material-symbols-outlined">
                     account_circle
@@ -37,7 +37,7 @@
                     menu
                 </span>
             </button>
-            
+
             <nav class="navHeader">
                 <ul>
                     <li class="liBtnMenu">
@@ -54,9 +54,9 @@
                     <li><a href="./contato.html">Contatos</a></li>
                 </ul>
             </nav>
-            
+
         </div>
-        </header>
+    </header>
 
     <main>
 
@@ -86,16 +86,53 @@
                         passkey
                     </span>
                 </div>
+
                 <div class="boxScrollForm">
 
-                    <div class="divForm" id="boxForm01">
+                    <div class="boxForm" id="boxForm01">
 
+                        <div class="boxInput">
+                            <label>Nome</label>
+                            <input type="text">
+                        </div>
 
 
                         <div class="boxInput">
+                            <label>Data de Nascimento</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="boxInput">
+                            <label>Telefone</label>
+                            <input type="tel">
+                        </div>
+
+                        <div class="boxInput">
+                            <label for="">Gênero</label>
+                            <select name="" id="">
+
+                                <option value="null" selected disabled>Selecionar</option>
+                                <option value="m">Masculino</option>
+                                <option value="f">Feminino</option>
+                                <option value="o">Outro</option>
+                                <option value="null">Prefiro não informar</option>
+
+                            </select>
+                        </div>
+
+
+                        <button class="btnNext">
+                            Continuar
+                        </button>
+
+                    </div>
+
+                    <div class="boxForm">
+
+                        <div class="boxInput">
                             <label>CEP</label>
-                            <input type="text" id="input-cep" maxlength="8" pattern="\d*" inputmode="numeric">
                             <p class="aviso">cpe inválido</p>
+                            <input type="text" id="input-cep" maxlength="8" pattern="\d*" inputmode="numeric">
                         </div>
 
                         <div class="boxInput">
@@ -108,8 +145,8 @@
                             <input type="text">
                         </div>
                         <div>
-                            <input type="checkbox">
                             <label>Sem número</label>
+                            <input type="checkbox">
                         </div>
 
                         <div class="boxInput">
@@ -117,101 +154,116 @@
                             <input type="text">
                         </div>
 
-
-
                         <div class="boxInput">
                             <label>Bairro</label>
                             <input type="text" id="bairro" class="input-form">
                         </div>
-
 
                         <div class="boxInput">
                             <label>Estado</label>
                             <input type="text" id="estado" class="input-form">
                         </div>
 
-
                         <div class="boxInput">
                             <label>Cidade</label>
                             <input type="text" id="localidade" class="input-form">
                         </div>
-                        <button class="btnNext">
-                            Continuar
-                        </button>
+                        
+                        <div class="boxBtns">
+                            <button class="btnBack" value="null">
+                                voltar
+                            </button>
+                            <button class="btnNext" value="null">
+                                Continuar
+                            </button>
+                        </div>
 
                     </div>
 
-                    <div class="divForm">
-
-                        <label for="">Nome</label>
-                        <input type="text" name="" id="">
-                        <button class="btnNext">
-                            Continuar
-                        </button>
-                    </div>
 
 
+                    <div class="boxForm">
+                        <div class="boxInput">
+                            <label>E-mail</label>
+                            <input type="text">
+                        </div>
 
+                        <div class="boxInput">
+                            <label>Senha</label>
+                            <input type="text">
+                        </div>
 
+                        <div class="boxInput">
+                            <label>Comfirmar senha</label>
+                            <input type="text">
+                        </div>
 
-                    <div class="divForm">
-                        <label for="">senha</label>
-                        <input type="text">
-                        <button class="btnNext">
-                            Continuar
-                        </button>
+                        <div class="boxInput">
+                            <label>Nome</label>
+                            <input type="text">
+                        </div>
+                        
+                        <div class="boxBtns">
+                            <button class="btnBack">
+                                voltar
+                            </button>
+                            <button class="btnNext">
+                                Continuar
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </form>
 
         </div>
 
-        
+
         <footer>
 
-            
-            
+
+
             <div class="containerFooter">
                 <div class="boxListas">
 
-                <ul>
-                    <li><button>Informações</button></li>
-                    <li>Contato</li>
-                    <li>Guia de Medidias</li>
-                    <li>Posso ter taxado?</li>
-                    <li>perguntas Frequentes</li>
-                    <li>Prazos e Entrega</li>
-                    <li>Politica de privacidade</li>
-                    <li>Termos e Condição de uso</li>
-                    
-                </ul>
+                    <ul>
+                        <li><button>Informações</button></li>
+                        <li>Contato</li>
+                        <li>Guia de Medidias</li>
+                        <li>Posso ter taxado?</li>
+                        <li>perguntas Frequentes</li>
+                        <li>Prazos e Entrega</li>
+                        <li>Politica de privacidade</li>
+                        <li>Termos e Condição de uso</li>
 
-                <ul>
-                    <li><button>Ajuda</button></li>
-                    <li>Home</li>
-                    <li>Produtos</li>
-                    <li>Prazos e Entrega</li>
-                    <li>Dúvidas</li>
-                    <li>Fale conosco</li>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li><button>Navegação</button></li>
-                    <li>Home</li>
-                    <li>Produtos</li>
-                    <li>Prazos e Entrega</li>
-                    <li>Dúvidas</li>
-                    <li>Contato</li>
-                </ul>
+                    <ul>
+                        <li><button>Ajuda</button></li>
+                        <li>Home</li>
+                        <li>Produtos</li>
+                        <li>Prazos e Entrega</li>
+                        <li>Dúvidas</li>
+                        <li>Fale conosco</li>
+                    </ul>
 
-                <img src="./imgs/logo-devstore.png" alt="">
+                    <ul>
+                        <li><button>Navegação</button></li>
+                        <li>Home</li>
+                        <li>Produtos</li>
+                        <li>Prazos e Entrega</li>
+                        <li>Dúvidas</li>
+                        <li>Contato</li>
+                    </ul>
 
-            </div>
+                    <img src="./imgs/logo-devstore.png" alt="">
 
-            <div class="boxBottom">
+                </div>
 
-                © 2025 DevStore. Todos os direitos reservados
-            </div>
+                <div class="boxBottom">
+
+                    © 2025 DevStore. Todos os direitos reservados
+                </div>
             </div>
 
 

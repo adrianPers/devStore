@@ -73,7 +73,9 @@ inputCEP.addEventListener('change', async () => {
 
 const btnsNext = [...document.getElementsByClassName('btnNext')];
 const boxForm01 = document.getElementById('boxForm01');
+const boxsForm = [...document.getElementsByClassName("boxForm")];
 const etapas = [...document.querySelectorAll('.etapas .etapa')];
+
 
 
 
@@ -81,14 +83,30 @@ btnsNext.map((btn, index) => {
     btn.addEventListener('click', (e) => {
 
         e.preventDefault();
-        etapas.map(
-            etapa => etapa.classList.remove('etapaAtual')
-        );
-        if (index != 2) {
+
+        [...boxsForm[index-0].children].map((el) => {
+            console.log(el.lastElementChild?.value);
+        })
+        // console.log(boxsForm[index-0]);
+        // etapas.map(
+        //     etapa => etapa.classList.remove('etapaAtual')
+        // );
+
+        if ([...boxsForm[index-0].children].every((el) => {
+            return el.lastElementChild?.value != ""
+        }) && index != 2) {
             boxForm01.style.marginLeft = `-${(index + 1) * (100 / 3)}%`;
-            etapas[index + 1].classList.add('etapaAtual')
+            etapas[index + 1].classList.add('etapaAtual');
+        } else {
+            console.log("não foi")
         }
 
     })
 
 })
+
+console.log(boxsForm)
+
+
+
+const inputs = [...document.querySelectorAll("input")];

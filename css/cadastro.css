@@ -42,7 +42,7 @@ form {
     gap: 5px;
 }
 
-.boxInput input {
+.boxInput input, select {
     padding: 5px;
     outline: none;
     border: 1px solid rgb(7, 7, 7);
@@ -50,7 +50,10 @@ form {
 }
 
 .boxInput input:hover,
-.boxInput input:focus {
+.boxInput input:focus,
+.boxInput select:hover,
+.boxInput select:focus
+ {
     outline: 2px solid rgb(242, 99, 40);
     outline-offset: -1px;
 }
@@ -98,7 +101,7 @@ form {
     width: 300%;
 }
 
-.divForm {
+.boxForm {
     width: calc(100%/3);
     height: 100%;
     transition: 0.5s;

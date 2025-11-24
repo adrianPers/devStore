@@ -1,12 +1,12 @@
 
 const btns = [...document.getElementsByClassName("btnSlider")];
-const slide01 = document.querySelector('.slide01');
+const slides01 = [...document.getElementsByClassName("slide01")];
 let contSlide = 0;
 let isLeft = false;
 
 btns.map((btn, index) => {
     btn.addEventListener("click", () => {
-        if(index){
+        if(index%2 == 1){
            if(contSlide != 50){
             contSlide += 10;
            } 
@@ -17,7 +17,9 @@ btns.map((btn, index) => {
             }
         }
         
-        slide01.style.marginLeft = `-${contSlide}%`;
+        slides01.map(
+            slide => slide.style.marginLeft = `-${contSlide}%`
+        );
     });
 });
 
@@ -35,5 +37,7 @@ setInterval(() => {
             isLeft = !isLeft
         }
     }
-    slide01.style.marginLeft = `-${contSlide}%`;
+    slides01.map(
+            slide => slide.style.marginLeft = `-${contSlide}%`
+        );
 }, 5000);
