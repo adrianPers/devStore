@@ -40,6 +40,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    /* border: 1px solid; */
 }
 
 .boxInput input, select {
@@ -58,7 +59,13 @@ form {
     outline-offset: -1px;
 }
 
-.btnNext {
+.boxBtns{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnNext, .btnBack{
     background-color: rgb(242, 99, 40);
     color: white;
     padding: 10px;
@@ -66,6 +73,12 @@ form {
     border: 0px;
     font-weight: bolder;
     font-size: 1.1rem;
+}
+
+
+.btnBack{
+    background-color: transparent;
+    color: rgb(242, 99, 40);
 }
 
 .etapas {
@@ -107,23 +120,85 @@ form {
     transition: 0.5s;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 15px;
     /* border: 1px solid; */
 
 }
 
 
+.inputInvalido{
+    position: relative;
+}
+
+.inputInvalido input{
+    outline: 2px solid red;
+    border-color: red;
+}
+
+.inputInvalido input:hover, 
+.inputInvalido input:focus{
+    outline: 2px solid red;
+}
+
+.inputDisabled{
+    opacity: 0.2;
+}
+
+.inputDisabled input:hover{
+    outline: none;
+}
+
+.boxInputCheck{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.boxInputCheck input:hover,
+.boxInputCheck input:focus{
+    outline: none;
+}
+
+.boxInputCheck span {
+    color: rgb(209, 33, 20);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.inputInvalido::after{
+    content: 'Campo inválido';
+    position: absolute;
+    padding-inline: 5px;
+    border-radius: 5px;
+    /* background-color: rgba(255, 0, 0, 0.7); */
+    left: 0%;
+    bottom: -40%;
+    z-index: 2;
+    height: 40%;
+    font-size: 14px;
+    color: red;
+}
+
+
+
 @media screen and (max-width: 650px) {
+
+    
 
     .boxCadastro {
         height: auto;
+        width: 100%;
     }
 
     form {
         border-radius: 0px;
         padding-block: 20px;
         box-shadow: none;
+        width: 100%;
     }
 
 }

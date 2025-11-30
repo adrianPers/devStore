@@ -32,3 +32,15 @@ if(nameFile == "sobre.html"){
 }, 2000)
 
 }
+
+if(nameFile == "sobre.html"){
+   
+    const marquees = [...document.querySelectorAll(".marquee")];
+    marquees.map((el, index) => {
+        el.stop();
+        
+        setTimeout(() => {
+            el.start();
+        }, (index * 1500));
+    });
+}
