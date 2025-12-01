@@ -98,13 +98,14 @@
 
 .card03 div {
     clip-path: polygon(3% 77%, 0 32%, 0 0, 100% 0, 100% 100%, 13% 98%);
+    width: fit-content;
 }
+
 
 .card03 ul{
     list-style: none;
     color: white;
     font-size: 150%;
-    clip-path: polygon(0 0, 100% 0, 95% 24%, 100% 50%, 95% 73%, 100% 100%, 0 100%, 4% 79%, 0 52%, 4% 16%);
 
     /* display: flex; */
 }
@@ -171,6 +172,10 @@
     .card:nth-child(odd) {
     justify-content: flex-end;
     flex-direction: column;
+}
+
+.ocultar{
+    display: none;
 }
 
     .card div {

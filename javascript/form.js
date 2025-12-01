@@ -108,7 +108,7 @@ btnsNext.map((btn, index) => {
                 etapas[index + 1].classList.add('etapaAtual');
             }else {
                 alert("Conta cadastrada com sucesso!!!");
-                window.location.replace("https://loja-devstore.netlify.app/cadastro");
+                window.location.replace("https://loja-devstore.netlify.app/index.html");
             }
         } else {
             console.log("Campo não preeenchido");
